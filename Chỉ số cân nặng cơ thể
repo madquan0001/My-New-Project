@@ -1,0 +1,26 @@
+package com.company;
+import java.util.Scanner;
+
+        public class Main {
+
+            public static void main(String[] args) {
+
+                double weight, height, bmi;
+                Scanner scanner = new Scanner(System.in);
+                System.out.printf("Nhập vào cân nặng của bạn : ");
+                weight = scanner.nextDouble();
+                System.out.printf("Nhập vào chiều cao của bạn (cm) : ");
+                height = scanner.nextDouble();
+                bmi = weight / Math.pow(height / 100, 2);
+                if (bmi < 18.5) {
+                    System.out.println("Bạn hơi gầy");
+                } else if (18.5 <= bmi && bmi < 25) {
+                    System.out.println("Bạn bình thường");
+                } else if (25 <= bmi && bmi < 30) {
+                    System.out.println("Bạn hơi béo");
+                } else {
+                    System.out.println("Bạn rất là béo :))");
+                }
+
+            }
+        }
