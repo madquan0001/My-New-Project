@@ -1,0 +1,83 @@
+package com.company;
+import sun.security.krb5.internal.tools.Ktab;
+
+import javax.xml.xpath.XPath;
+import java.util.Scanner;
+import java.util.Date;
+public class Main {
+    public static void NhapSo(int a[], int b) {
+        Scanner scanner = new Scanner(System.in);
+
+        for (int i = 0; i < b ; i++)
+        {
+            System.out.printf("a[" + i + "] = ");
+            a[i] = scanner.nextInt();
+        }
+    }
+
+
+    public static int KTTrung(int a[], int b) {
+        int dem = 0;
+        for (int i = 0 ; i < b ; i++)
+        {
+            for (int j = i + 1 ; j < b ; j++)
+            {
+                if (a[i] == a[j])
+                {
+                    dem++;
+                }
+            }
+        }
+        if (dem == 0)
+        {
+            return b;
+        }
+        else
+            return (b - dem);
+    }
+
+    public static int SoSanh(int a[] , int b, int solonnhat) {
+
+        for (int i = 0; i < b; i++)
+        {
+            int dem = 0;
+            for (int j = 0 ; j < b ; j++)
+            {
+                if (a[i] > a[j])
+                {
+                    dem++;
+                    if (dem == (KTTrung(a,b) - 1))
+                    {
+                        solonnhat = a[i];
+                        break;
+                    }
+                }
+            }
+        }
+        return solonnhat;
+    }
+
+    public static void Xuat(int a[] , int b , int solonnhat)
+    {
+        System.out.println("Mảng bạn vừa nhập là : ");
+        for (int i = 0 ; i < b ; i++)
+        {
+            System.out.println("a[" + i + "] = " + a[i]);
+        }
+        System.out.println("Số lớn nhất là : " + SoSanh(a,b,solonnhat));
+
+    }
+
+    public static void main(String[] args) {
+        // write your code here
+        int a[] = new int[100], b, p = 0, solonnhat = 0;
+        Scanner scanner = new Scanner(System.in);
+        System.out.printf("Nhập vào số phần tử : ");
+        b = scanner.nextInt();
+        System.out.println();
+        NhapSo(a,b);
+        KTTrung(a,b);
+        SoSanh(a,b,solonnhat);
+        Xuat(a, b, solonnhat);
+    }
+}
