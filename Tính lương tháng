@@ -1,0 +1,31 @@
+package com.company;
+import java.util.Scanner;
+
+        public class Main {
+
+            public static void main(String[] args) {
+
+                int LuongThang,HSL,SoNam;
+                Scanner scanner = new Scanner(System.in);
+                System.out.printf("Nhập vào Số năm làm việc : ");
+                SoNam = scanner.nextInt();
+                if (1 <= SoNam && SoNam <= 100)
+                {
+                    System.out.printf("Nhập vào Hệ số lương (1 - 5) : ");
+                    HSL = scanner.nextInt();
+                    if (1 <= HSL && HSL <= 5)
+                    {
+                        LuongThang = HSL * 4000000 + SoNam * 500000;
+                        System.out.printf("Lương tháng là %s", LuongThang);
+                    }
+                    else
+                    {
+                        System.out.printf("Hệ số lương không hợp lệ");
+                    }
+                }
+                else
+                {
+                    System.out.printf("Số năm không hợp lệ");
+                }
+            }
+        }
