@@ -1,0 +1,15 @@
+package com.company;
+import java.util.Scanner;
+
+        public class Main{
+
+            public static void main(String[] args) {
+                float c, f;
+                Scanner scanner = new Scanner(System.in);
+                System.out.printf("Nhập vào độ C : ");
+                c = scanner.nextFloat();
+                f = ((9*c) + 160) / 5;
+                System.out.println("Chuyển sang độ F : " + f);
+            }
+
+        }
