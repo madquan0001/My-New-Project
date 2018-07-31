@@ -1,0 +1,19 @@
+package com.company;
+import java.util.Scanner;
+
+        public class Main {
+
+            public static void main(String[] args) {
+
+                int nam, i = 10;
+                Scanner scanner = new Scanner(System.in);
+                System.out.printf("Nhập năm bạn muốn kiểm tra : ");
+                nam = scanner.nextInt();
+                if ((nam % 4 == 0 && nam % 100 != 0) || nam % 400 == 0) {
+                    System.out.printf("- Năm %s là năm Nhuận", nam);
+                } else {
+                    System.out.printf("- Năm %s là năm Thường", nam);
+                }
+
+            }
+        }
