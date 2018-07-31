@@ -1,0 +1,80 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void DoiSo(float a, float b, float c) {
+
+        float d = c - b, e = a, f = d, phanso;
+        if (a < 0)
+        {
+            e = a + (-a * 2);
+        }
+        if (d < 0)
+        {
+            f = d + (-d * 2);
+        }
+        if (a < 0 && d < 0)
+        {
+            e = a + (-a * 2);
+            f = d + (-d * 2);
+        }
+        if (e < f)
+        {
+            for (float i = e ; i > 0 ; i--)
+            {
+                if (e % i == 0 && f % i == 0)
+                {
+                    System.out.println("Phương trình có nghiệm x = " + (d / i) + "/" + (a / i));
+                    break;
+                }
+            }
+        }
+        else
+        {
+            for (float j = f ; j > 0 ; j--)
+            {
+                if (e % j == 0 && f % j == 0)
+                {
+                    System.out.println("Phương trình có nghiệm x = " + (d / j) + "/" + (a / j));
+                    break;
+                }
+            }
+        }
+
+    }
+
+    public static void main(String[] args) {
+	// write your code here
+        float a,b,c,x,chuyen;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("----  Giải phương trình bậc nhất ax + b = 0  ---- ");
+        System.out.printf("a = ");
+        a = scanner.nextFloat();
+        System.out.printf("b = ");
+        b = scanner.nextFloat();
+        System.out.printf("c = ");
+        c = scanner.nextFloat();
+
+        if (a != 0)
+        {
+            x = (c - b) / a;
+            System.out.println("Phương trình có ngiệm x = " + x);
+            System.out.println("--> Chuyển sang phân số chọn 1 ");
+            chuyen = scanner.nextFloat();
+            if (chuyen == 1)
+            {
+                DoiSo(a,b,c);
+            }
+            else
+            {
+                System.out.println("Nhập sai !");
+            }
+        }
+        else
+        {
+            System.out.println("Phương trình có vô số nghiệm");
+        }
+    }
+}
