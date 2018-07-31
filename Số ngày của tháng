@@ -1,0 +1,72 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+
+        int x,y;
+        Scanner scanner = new Scanner(System.in);
+        System.out.printf("Nhập năm : ");
+        y = scanner.nextInt();
+        System.out.printf("Nhập tháng : ");
+        x = scanner.nextInt();
+        System.out.println();
+        System.out.println("----------------------------------------");
+        System.out.println();
+
+
+        switch (x)
+        {
+            case 1:
+                System.out.println("Tháng 1 có 31 ngày");
+                break;
+            case 2:if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0)
+            {
+                System.out.println("Tháng 2 năm nhuận có 29 ngày");
+                break;
+            }
+            else
+            {
+                System.out.println("Tháng 2 năm thường có 28 ngày");
+                break;
+            }
+            case 3:
+                System.out.println("Tháng 3 có 31 ngày");
+                break;
+            case 4:
+                System.out.println("Tháng 4 có 30 ngày");
+                break;
+            case 5:
+                System.out.println("Tháng 5 có 31 ngày");
+                break;
+            case 6:
+                System.out.println("Tháng 6 có 30 ngày");
+                break;
+            case 7:
+                System.out.println("Tháng 7 có 31 ngày");
+                break;
+            case 8:
+                System.out.println("Tháng 8 có 31 ngày");
+                break;
+            case 9:
+                System.out.println("Tháng 9 có 30 ngày");
+                break;
+            case 10:
+                System.out.println("Tháng 10 có 31 ngày");
+                break;
+            case 11:
+                System.out.println("Tháng 11 có 30 ngày");
+                break;
+            case 12:
+                System.out.println("Tháng 11 có 31 ngày");
+                break;
+                default:
+                    System.out.println("Nhập sai !");;
+                    break;
+        }
+
+    }
+}
