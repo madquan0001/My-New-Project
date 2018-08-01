@@ -1,0 +1,92 @@
+package com.company;
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int b, c, e, f, g, h;
+        String a;
+
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        System.out.printf("Nhập 2 số : ");
+        a = scanner.next();
+        b = scanner.nextInt();
+        System.out.println("Số bạn nhập là : " + a + b);
+        c = random.nextInt(99);
+        int j = Integer.parseInt(a);
+        e = c / 10;
+        f = c % 10;
+        g = (f * 10) + e;
+
+        System.out.println("*-*-*-   SỐ ĐỘC ĐẮC LÀ " + c + "   -*-*-*");
+        if (j == 0)
+        switch (a)
+        {
+            case "0":
+                switch (b)
+                {
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                    case 5:
+                    case 6:
+                    case 7:
+                    case 8:
+                    case 9:
+                        if (b == c) {
+                            System.out.println("****   Bạn trúng số ĐỘC ĐẮC   ****");
+                            System.out.println("       Thưởng 10,000$");
+                            break;
+                        } else if (b == g) {
+                            System.out.println("***   Bạn trúng số GIẢI NHÌ   ***");
+                            System.out.println("      Thưởng 3,000$");
+                            break;
+                        } else if (b == e || b == f) {
+                            System.out.println("***   Bạn trúng số GIẢI BA   ***");
+                            System.out.println("      Thưởng 1,000$");
+                            break;
+                        } else {
+                            System.out.println("Bạn không trúng số");
+                            break;
+                        }
+                    default:
+                        System.out.println("Bạn nhập sai !");
+                        break;
+                }
+                break;
+                default:
+                    System.out.println("Bạn nhập sai !");
+                    break;
+
+        }
+        else
+        {
+            int i = Integer.parseInt(a);
+            if (0 < i && i < 10)
+            {
+                h = (i * 10) + b;
+                if (10 <= h && h < 100) {
+                    if (h == c) {
+                        System.out.println("****   Bạn trúng số ĐỘC ĐẮC   ****");
+                        System.out.println("       Thưởng 10,000$");
+                    } else if (h == g) {
+                        System.out.println("***   Bạn trúng số GIẢI NHÌ   ***");
+                        System.out.println("      Thưởng 3,000$");
+                    } else if (i == e || i == f || b == e || b == f) {
+                        System.out.println("***   Bạn trúng số GIẢI BA   ***");
+                        System.out.println("      Thưởng 1,000$");
+                    } else {
+                        System.out.println("Bạn không trúng số");
+                    }
+                }
+            }
+            else
+                System.out.println("Bạn nhập sai !");
+        }
+    }
+}
