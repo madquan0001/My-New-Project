@@ -1,0 +1,42 @@
+package com.company;
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int a,b,c;
+        double delta, x1, x2;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("GIẢI PHƯƠNG TRÌNH BẬC 2");
+        System.out.println("Phương trình có dạng ax^2 + bx + c = 0");
+        System.out.println("Nhập a, b, c : ");
+        System.out.printf("a = ");
+        a = scanner.nextInt();
+        System.out.printf("b = ");
+        b = scanner.nextInt();
+        System.out.printf("c = ");
+        c = scanner.nextInt();
+        delta = Math.pow(b,2) - 4 * (a * c);
+        if (delta > 0)
+        {
+            x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            x2 = (b + Math.sqrt(delta)) / (2 * a);
+            System.out.println("Phương trình có 2 nghiệm : ");
+            System.out.println("x1 = " + x1);
+            System.out.println("x2 = " + x2);
+        }
+        else if (delta == 0)
+        {
+            System.out.println("Phương trình có nghiệm kép : ");
+            x1 = (-b) / (2 * a);
+            System.out.println("x = " + x1);
+        }
+        else
+        {
+            System.out.println("Phương trình vô nghiệm");
+        }
+
+    }
+}
