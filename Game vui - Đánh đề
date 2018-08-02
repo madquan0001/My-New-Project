@@ -8,13 +8,13 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        int tien = 100000;
+        int tien = 1000;
 
         System.out.println("#@#@#@#@   GAME ĐÁNH ĐỀ   @#@#@#@#");
         System.out.println();
         Luat();
         System.out.println();
-        System.out.println("Bạn có 100,000$ tài sản cha ông để lại");
+        System.out.println("Bạn có 1,000$ tài sản cha ông để lại");
         System.out.println();
         while (tien > 0) {
             int a, b, c, x, y, z, thuong;
