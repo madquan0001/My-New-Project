@@ -21,7 +21,7 @@ public class Main {
             System.out.println();
             System.out.printf("Bạn muốn đánh bao nhiêu tiền : ");
             z = Integer.parseInt(scanner.nextLine());
-            if (z < tien) {
+            if (100 < z && z < tien) {
                 System.out.printf("Mhập vào Số trúng thưởng ( 2 chữ số ) : ");
                 String s = scanner.nextLine();
                 int i = random.nextInt(99);
@@ -125,7 +125,12 @@ public class Main {
                 }
 
 
-            } else {
+            }
+            else if (z < 100)
+            {
+                System.out.println("Bạn phải đánh tối thiểu 100$");
+            }
+            else {
                 System.out.println("Bạn đánh nhiều tiền hơn số tiền sẵn có");
                 continue;
             }
@@ -139,6 +144,7 @@ public class Main {
         System.out.println("Giải ĐỘC ĐẮC : khớp y nguyên           --  Thưởng x100");
         System.out.println("Giải NHÌ : khớp đảo ngược VD : 38 - 83  --  Thưởng x50");
         System.out.println("Giải BA : trùng 1 số trong số độc đắc  --  Thưởng x10");
+        System.out.println("---   Lưu ý : đánh tối thiểu 100$   ---");
 
     }
 }
