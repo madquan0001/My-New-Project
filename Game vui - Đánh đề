@@ -21,7 +21,7 @@ public class Main {
             System.out.println();
             System.out.printf("Bạn muốn đánh bao nhiêu tiền : ");
             z = Integer.parseInt(scanner.nextLine());
-            if (100 < z && z < tien) {
+            if (100 <= z && z < tien) {
                 System.out.printf("Mhập vào Số trúng thưởng ( 2 chữ số ) : ");
                 String s = scanner.nextLine();
                 int i = random.nextInt(99);
