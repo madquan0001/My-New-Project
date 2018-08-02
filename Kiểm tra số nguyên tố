@@ -1,0 +1,34 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int soNguyenTo, x = 1, count = 0;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.printf("Nhập số bạn muốn kiểm tra : ");
+        soNguyenTo = scanner.nextInt();
+
+        while (x <= soNguyenTo)
+        {
+            if (soNguyenTo % x == 0)
+            {
+                count++;
+            }
+            x++;
+        }
+        if (count == 2)
+        {
+            System.out.println("Số " + soNguyenTo + " LÀ số nguyên tố .");
+        }
+        else
+        {
+            System.out.println("Số " + soNguyenTo + " KHÔNG PHẢI số nguyên tố .");
+        }
+
+        }
+
+}
