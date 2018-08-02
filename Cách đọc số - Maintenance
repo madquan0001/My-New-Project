@@ -1,21 +1,37 @@
 package com.company;
 import java.util.Scanner;
-import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
 
         int a, b = 0, c;
+        int e = 0, f = 0, g = 0;
         Scanner scanner = new Scanner(System.in);
 
-        System.out.printf("Nhập vào số bạn muốn biết cách đọc : ");
+        System.out.printf("Nhập vào số bạn muốn biết cách đọc (0 - 1000) : ");
         a = scanner.nextInt();
-        if (0 <= a && a < 1000) {
-            int e, f, g;
+        if (100 <= a && a < 1000) {
             e = a / 100;
             f = (a % 100) / 10;
             g = (a % 100) % 10;
+        }
+        else if (10 <= a && a < 100)
+        {
+            e = 0;
+            f = a / 10;
+            g = a % 10;
+        }
+        else if (0 <= a && a < 10)
+        {
+            e = 0;
+            f = 0;
+            g = a;
+        }
+        else
+        {
+            System.out.println("Bạn nhập sai !");
+        }
 
             switch (e) {
                 case 1:
@@ -45,8 +61,8 @@ public class Main {
                 case 9:
                     System.out.printf("Nine hundred ");
                     break;
-                    default:b++;
-                        break;
+                default:b++;
+                    break;
 
             }
             switch (f) {
@@ -89,21 +105,31 @@ public class Main {
                 case 9:
                     System.out.printf("ninety ");
                     break;
-                    default:break;
+                default:break;
             }
             switch (g)
             {
                 case 1:
-                    if (f == 1) {
+                    if (f == 1 && b != 1) {
                         System.out.println(" and eleven");
-                    } else {
+                    }
+                    else if (f == 1 && b == 1)
+                    {
+                        System.out.println("eleven");
+                    }
+                    else {
                         System.out.println("one");
                     }
                     break;
                 case 2:
-                    if (f == 1) {
+                    if (f == 1 && b != 1) {
                         System.out.println("and twelve");
-                    } else {
+                    }
+                    else if (f == 1 && b == 1)
+                    {
+                        System.out.println("twelve");
+                    }
+                    else {
                         System.out.println("two");
                     }
                     break;
@@ -114,9 +140,14 @@ public class Main {
                     System.out.println("four");
                     break;
                 case 5:
-                    if (f == 1) {
+                    if (f == 1 && b != 1) {
                         System.out.println("and fifteen");
-                    } else {
+                    }
+                    else if (f == 1 && b == 1)
+                    {
+                        System.out.println("fifteen");
+                    }
+                    else {
                         System.out.println("five");
                     }
                     break;
@@ -133,8 +164,6 @@ public class Main {
                     System.out.println("nine");
                     break;
             }
-        }
 
     }
 }
-
