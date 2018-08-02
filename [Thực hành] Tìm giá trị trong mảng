@@ -1,0 +1,25 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        String[] student = {"Mạnh Quân","Hoàng Quân","Kiên","Thịnh","Sơn","Toàn","Huy Hoàng","Đình Hoàng","Quyền","Hiền"};
+        String ten;
+        System.out.println("Nhập tên : ");
+        ten = scanner.nextLine();
+
+        for (int i = 0; i < student.length ; i++)
+        {
+            if (student[i].equals(ten))
+            {
+                System.out.println(ten + " đứng thứ " + (i + 1));
+            }
+        }
+        System.out.println("Không tìm được tên !");
+
+    }
+
+}
