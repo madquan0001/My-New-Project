@@ -33,7 +33,7 @@ public class Main {
                 if (count == a.length)
                 {
                     System.out.println();
-                    System.out.println("Tỷ phú giàu nhất là " + ten[j] + " đứng thứ " + (j + 1) + " trong danh sách .");
+                    System.out.println("Tỷ phú giàu nhất là " + ten[j] + " có " + a[j] + "$ đứng thứ " + (j + 1) + " trong danh sách .");
                 }
             }
         }
