@@ -1,0 +1,25 @@
+package com.company;
+import java.util.Scanner;
+
+        public class Main{
+
+            public static void main(String[] args) {
+
+                float vl, hh, sh, tb, tong;
+                Scanner scanner = new Scanner(System.in);
+                System.out.printf("Nhập điểm Vật lý : ");
+                vl = scanner.nextFloat();
+                System.out.printf("Nhập điểm Hóa học : ");
+                hh = scanner.nextFloat();
+                System.out.printf("Nhập điểm Sinh học : ");
+                sh = scanner.nextFloat();
+                
+                tong = vl + hh + sh;
+                tb = tong / 3;
+
+                System.out.println("Tổng điểm là : " + tong);
+                System.out.println("Điểm trung bình là : " + tb);
+
+            }
+
+        }
