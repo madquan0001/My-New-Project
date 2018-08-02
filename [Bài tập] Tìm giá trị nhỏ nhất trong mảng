@@ -1,0 +1,48 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        int soTyPhu;
+        String[] ten = {"Mạnh Quân","Hoàng Quân","Kiên","Sơn","Huy Hoàng","Đình Hoàng","Quyền","Hiền","Thịnh","Toàn","Chính","Long","Đức","Tuấn","Nghĩa","Cù Quân","Tân","Mạnh","Nhật","Minh"};
+        System.out.printf("Bạn muốn nhập giá trị cho mấy tỷ phú (tối đa 20) : ");
+        soTyPhu = scanner.nextInt();
+        if (0 < soTyPhu && soTyPhu <= 20)
+        {
+            int a[] = new int[soTyPhu];
+            for (int i = 0 ; i < a.length ; i++)
+            {
+                String tiphu;
+                System.out.printf("Tỷ phú " + ten[i] + " có : ");
+                a[i] = scanner.nextInt();
+            }
+            for (int j = 0 ; j < a.length ; j++)
+            {
+                int count = 0;
+                for (int k = 0 ; k < a.length ; k++)
+                {
+                    if (a[j] <= a[k])
+                    {
+                        count++;
+                    }
+                }
+                if (count == a.length)
+                {
+                    System.out.println();
+                    System.out.println("Tỷ phú nghèo nhất là " + ten[j] + " có " + a[j] + "$ đứng thứ " + (j + 1) + " trong danh sách .");
+                }
+            }
+        }
+        else
+        {
+            System.out.println("Nhập sai !");
+        }
+
+
+    }
+
+}
