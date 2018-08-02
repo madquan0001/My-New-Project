@@ -8,8 +8,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         int soTyPhu;
-        String[] ten = {"Mạnh Quân","Hoàng Quân","Kiên","Sơn","Huy Hoàng","Đình Hoàng","Quyền","Hiền","Thịnh","Toàn"};
-        System.out.printf("Bạn muốn nhập giá trị cho mấy tỷ phú : ");
+        String[] ten = {"Mạnh Quân","Hoàng Quân","Kiên","Sơn","Huy Hoàng","Đình Hoàng","Quyền","Hiền","Thịnh","Toàn","Chính","Long","Đức","Tuấn","Nghĩa","Cù Quân","Tân","Mạnh","Nhật","Minh"};
+        System.out.printf("Bạn muốn nhập giá trị cho mấy tỷ phú (tối đa 20) : ");
         soTyPhu = scanner.nextInt();
         if (0 < soTyPhu && soTyPhu <= 20)
         {
@@ -36,6 +36,10 @@ public class Main {
                     System.out.println("Tỷ phú giàu nhất là " + ten[j] + " đứng thứ " + (j + 1) + " trong danh sách .");
                 }
             }
+        }
+        else
+        {
+            System.out.println("Nhập sai !");
         }
 
 
