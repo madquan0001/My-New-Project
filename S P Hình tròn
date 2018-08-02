@@ -1,0 +1,19 @@
+package com.company;
+import java.util.Scanner;
+
+        public class Main{
+
+            public static void main(String[] args) {
+
+                double r, s, p;
+                Scanner scanner = new Scanner(System.in);
+                System.out.printf("Nhập vào bán kính hình tròn (cm) : ");
+                r = scanner.nextFloat();
+                s = (r * r) * 3.14;
+                p = r * 2 * 3.14;
+                System.out.println("Chu vi hình tròn là : " + p);
+                System.out.println("Diện tích hình tròn là : " + s);
+
+            }
+
+        }
