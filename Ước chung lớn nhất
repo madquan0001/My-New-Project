@@ -1,0 +1,48 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int uoc, x, y;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Nhập 2 số : ");
+        System.out.printf("a = ");
+        x = scanner.nextInt();
+        System.out.printf("b = ");
+        y = scanner.nextInt();
+
+        if (x < y)
+        {
+            uoc = x;
+            while (uoc > 0)
+            {
+                if (x % uoc == 0 && y % uoc == 0)
+                {
+                    System.out.println("Ước chung lớn nhất là : " + uoc);
+                    break;
+                }
+                uoc--;
+            }
+        }
+        else
+        {
+            uoc = y;
+            while (uoc > 0)
+            {
+                if (x % uoc == 0 && y % uoc == 0)
+                {
+                    System.out.println("Ước chung lớn nhất là : " + uoc);
+                    break;
+                }
+                uoc--;
+            }
+        }
+
+        }
+
+}
