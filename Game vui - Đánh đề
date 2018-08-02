@@ -12,6 +12,7 @@ public class Main {
 
         System.out.println("#@#@#@#@   GAME ĐÁNH ĐỀ   @#@#@#@#");
         System.out.println();
+        Luat();
         System.out.println();
         System.out.println("Bạn có 100,000$ tài sản cha ông để lại");
         System.out.println();
@@ -124,14 +125,20 @@ public class Main {
                 }
 
 
-            }
-            else
-            {
+            } else {
                 System.out.println("Bạn đánh nhiều tiền hơn số tiền sẵn có");
                 continue;
             }
         }
         System.out.println("Bạn đã hết tiền ^-^");
         System.out.println("Phá sản vì không biết chơi, quá gà");
+    }
+
+    public static void Luat() {
+
+        System.out.println("Giải ĐỘC ĐẮC : khớp y nguyên           --  Thưởng x100");
+        System.out.println("Giải NHÌ : khớp đảo ngược VD : 38 - 83  --  Thưởng x50");
+        System.out.println("Giải BA : trùng 1 số trong số độc đắc  --  Thưởng x10");
+
     }
 }
