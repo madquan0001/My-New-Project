@@ -1,0 +1,22 @@
+package com.company;
+
+import java.util.Calendar;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        Calendar calendar = Calendar.getInstance();
+
+        long year, old;
+        year = calendar.get(Calendar.YEAR);
+        System.out.printf("Bạn sinh năm bao nhiêu ? ");
+        old = scanner.nextInt();
+
+        System.out.println("Bạn năm nay " + (year - old) + " tuổi");
+
+        }
+
+}
