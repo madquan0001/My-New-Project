@@ -1,0 +1,18 @@
+package com.company;
+import java.util.Scanner;
+
+        public class Main{
+
+            public static void main(String[] args) {
+
+                float vnd, usd, tigia;
+                Scanner scanner = new Scanner(System.in);
+                System.out.printf("Nhập vào số USD : ");
+                usd = scanner.nextFloat();
+                tigia = 23000/1;
+                        vnd = usd * tigia;
+                System.out.println("Chuyển sang VND : " + vnd);
+
+            }
+
+        }
