@@ -1,0 +1,75 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        Scanner scanner = new Scanner(System.in);
+        int a[][] = new int[4][4];
+        int bombs, b, c;
+        System.out.printf("Imput the count of Bomb you want to set : ");
+        bombs = scanner.nextInt();
+        if (bombs < 16) {
+            for (int i = 0; i < bombs; i++) {
+                System.out.printf("Imput the possition you want to set : ");
+                b = scanner.nextInt();
+                c = scanner.nextInt();
+                if (b >= 0 && b < a.length && c >= 0 && c < a.length)
+                {
+                    a[b][c] = 9;
+                }
+                else
+                {
+                    System.out.println("Wrong possition");
+                    System.exit(0);
+                }
+            }
+            for (int i = 0; i < a.length; i++) {
+                for (int j = 0; j < a.length; j++) {
+                    if (a[i][j] >= 9) {
+                        if (i < a.length - 1) {
+                            a[i + 1][j]++;
+                        }
+                        if (j < a.length - 1) {
+                            a[i][j + 1]++;
+                        }
+                        if (i < a.length - 1 && j < a.length - 1) {
+                            a[i + 1][j + 1]++;
+                        }
+                        if (i > 0 && j > 0) {
+                            a[i - 1][j - 1]++;
+                        }
+                        if (i > 0) {
+                            a[i - 1][j]++;
+                        }
+                        if (i > 0 && j < a.length - 1) {
+                            a[i - 1][j + 1]++;
+                        }
+                        if (j > 0) {
+                            a[i][j - 1]++;
+                        }
+                        if (j > 0 && i < a.length - 1) {
+                            a[i + 1][j - 1]++;
+                        }
+                    }
+                }
+            }
+            for (int i = 0; i < a.length; i++) {
+                for (int j = 0; j < a.length; j++) {
+                    if (a[i][j] >= 9) {
+                        System.out.print("*");
+                        continue;
+                    }
+                    System.out.print(a[i][j]);
+                }
+                System.out.println();
+            }
+        }
+        else
+        {
+            System.out.println("Bombs number too much !");
+        }
+    }
+}
+
