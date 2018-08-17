@@ -1,0 +1,79 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        Scanner scanner = new Scanner(System.in);
+        int c, d, e, f, k, l;
+        System.out.println("** First Matrix **");
+        System.out.printf("Imput rows : ");
+        c = scanner.nextInt();
+        System.out.printf("Imput columns ; ");
+        d = scanner.nextInt();
+        System.out.println("** Second Matrix **");
+        System.out.printf("Imput rows : ");
+        e = scanner.nextInt();
+        System.out.printf("Imput columns : ");
+        f = scanner.nextInt();
+        k = c > e ? c : e;
+        l = d > f ? d : f;
+        double a[][] = new double[l][k];
+        double b[][] = new double[l][k];
+
+        System.out.println("-- Imput your First Matrix --");
+        for (int i = 0 ; i < c ; i++)
+        {
+            for (int j = 0 ; j < d ; j++)
+            {
+                System.out.print("a[" + i + "][" + j + "] = ");
+                a[i][j] = scanner.nextDouble();
+            }
+        }
+        System.out.println("-- Imput your Second Matrix --");
+        for (int i = 0 ; i < e ; i++)
+        {
+            for (int j = 0 ; j < f ; j++)
+            {
+                System.out.print("b[" + i + "][" + j + "] = ");
+                b[i][j] = scanner.nextDouble();
+            }
+        }
+        System.out.println("Your First Matrix it's : ");
+        for (int i = 0 ; i < c ; i++)
+        {
+            for (int j = 0 ; j < d ; j++)
+            {
+                System.out.print("a[" + i + "][" + j + "] = " + a[i][j] + "  ");
+            }
+            System.out.println();
+        }
+        System.out.println("Your Second Matrix it's : ");
+        for (int i = 0 ; i < e ; i++)
+        {
+            for (int j = 0 ; j < f ; j++)
+            {
+                System.out.print("b[" + i + "][" + j + "] = " + b[i][j] + "  ");
+            }
+            System.out.println();
+        }
+        double g[][] = new double[k][l];
+        for (int i = 0 ; i < k ; i++)
+        {
+            for (int j = 0 ; j < l ; j++)
+            {
+                g[i][j] = a[i][j] + b[i][j];
+            }
+        }
+        System.out.println("The array after calculate the sum it's : ");
+        for (int i = 0 ; i < k ; i++)
+        {
+            for (int j = 0 ; j < l ; j++)
+            {
+                System.out.print("g[" + i + "][" + j + "] = " + g[i][j] + "  ");
+            }
+            System.out.println();
+        }
+    }
+}
