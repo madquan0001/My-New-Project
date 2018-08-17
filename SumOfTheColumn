@@ -9,7 +9,7 @@ public class Main {
         int b, c, d, tong = 0;
         System.out.printf("Imput rows : ");
         c = scanner.nextInt();
-        System.out.printf("Imput column : ");
+        System.out.printf("Imput columns : ");
         d = scanner.nextInt();
         float a[][] = new float[c][d];
 
