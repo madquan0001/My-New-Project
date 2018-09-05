@@ -1,0 +1,54 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        double a = 0;
+        int b;
+        System.out.println("1. Fahrenheit to Celsius");
+        System.out.println("2. Celsius to Fahrenheit");
+        System.out.println("0. Exit ");
+        System.out.println();
+        System.out.print("Nhập lựa chọn : ");
+        b = scanner.nextInt();
+        switch (b)
+        {
+            case 1:CToF(a);
+                System.out.print("Nhập vào độ C : ");
+                a = scanner.nextDouble();
+                System.out.println(CToF(a));
+            break;
+            case 2:FToC(a);
+                System.out.print("Nhập vào độ F : ");
+                a = scanner.nextDouble();
+                System.out.println(FToC(a));
+            break;
+            case 0:System.exit(0);
+            default:
+                System.out.println("Bạn nhập sai cmnr");
+                break;
+        }
+
+    }
+
+    public static double CToF(double a) {
+
+        double f;
+        f = ((9 * a) / 5) + 32;
+        return f;
+
+    }
+
+    public static double FToC(double a) {
+
+        double c;
+        c = (5.0 / 9) * (a - 32);
+        return c;
+
+    }
+
+}
