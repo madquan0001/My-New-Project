@@ -1,0 +1,32 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int nam1, nam2;
+        System.out.print("Days of year xxxx to xxxx : ");
+        nam1 = scanner.nextInt();
+        nam2 = scanner.nextInt();
+        System.out.println("Total days = " + Days(nam1,nam2) + " days .");
+
+    }
+
+    public static int Days(int nam1 , int nam2) {
+
+        int days = 0;
+        for (int i = nam1 ; i <= nam2 ; i++)
+        {
+            if ((i % 4 == 0 && i % 100 != 0) || i % 400 == 0) {
+                days += 366;
+            } else {
+                days += 365;
+            }
+        }
+        return days;
+    }
+
+    }
+
