@@ -33,137 +33,143 @@ public class Main {
             System.out.println("Bạn nhập sai !");
         }
 
-            switch (e) {
-                case 1:
-                    System.out.printf("One hunded ");
-                    break;
-                case 2:
-                    System.out.printf("Two hundred ");
-                    break;
-                case 3:
-                    System.out.printf("Three hundred ");
-                    break;
-                case 4:
-                    System.out.printf("Four hundred ");
-                    break;
-                case 5:
-                    System.out.printf("Five hundred ");
-                    break;
-                case 6:
-                    System.out.printf("Six hundred ");
-                    break;
-                case 7:
-                    System.out.printf("Seven hundred ");
-                    break;
-                case 8:
-                    System.out.printf("Eight hundred ");
-                    break;
-                case 9:
-                    System.out.printf("Nine hundred ");
-                    break;
-                default:b++;
-                    break;
+        switch (e) {
+            case 1:
+                System.out.printf("One hunded ");
+                break;
+            case 2:
+                System.out.printf("Two hundred ");
+                break;
+            case 3:
+                System.out.printf("Three hundred ");
+                break;
+            case 4:
+                System.out.printf("Four hundred ");
+                break;
+            case 5:
+                System.out.printf("Five hundred ");
+                break;
+            case 6:
+                System.out.printf("Six hundred ");
+                break;
+            case 7:
+                System.out.printf("Seven hundred ");
+                break;
+            case 8:
+                System.out.printf("Eight hundred ");
+                break;
+            case 9:
+                System.out.printf("Nine hundred ");
+                break;
+            default:b++;
+                break;
 
-            }
-            switch (f) {
-                case 0:
-                    if (b != 1 && g == 0)
-                    {
-                        break;
-                    }
-                    else if (b == 1 && g == 0)
-                    {
-                        System.out.println("zero");
-                    }
-                    else
-                    {
-                        System.out.printf("and ");
-                    }
+        }
+        switch (f) {
+            case 0:
+                if (b != 1 && g == 0)
+                {
                     break;
-                case 1:break;
-                case 2:
-                    System.out.printf("twenty ");
-                    break;
-                case 3:
-                    System.out.printf("thirty ");
-                    break;
-                case 4:
-                    System.out.printf("forty ");
-                    break;
-                case 5:
-                    System.out.printf("fifty ");
-                    break;
-                case 6:
-                    System.out.printf("sixty ");
-                    break;
-                case 7:
-                    System.out.printf("seventy ");
-                    break;
-                case 8:
-                    System.out.printf("eighty ");
-                    break;
-                case 9:
-                    System.out.printf("ninety ");
-                    break;
-                default:break;
-            }
-            switch (g)
-            {
-                case 1:
-                    if (f == 1 && b != 1) {
-                        System.out.println(" and eleven");
-                    }
-                    else if (f == 1 && b == 1)
-                    {
-                        System.out.println("eleven");
-                    }
-                    else {
-                        System.out.println("one");
-                    }
-                    break;
-                case 2:
-                    if (f == 1 && b != 1) {
-                        System.out.println("and twelve");
-                    }
-                    else if (f == 1 && b == 1)
-                    {
-                        System.out.println("twelve");
-                    }
-                    else {
-                        System.out.println("two");
-                    }
-                    break;
-                case 3:
-                    System.out.println("three");
-                    break;
-                case 4:
-                    System.out.println("four");
-                    break;
-                case 5:
-                    if (f == 1 && b != 1) {
-                        System.out.println("and fifteen");
-                    }
-                    else if (f == 1 && b == 1)
-                    {
-                        System.out.println("fifteen");
-                    }
-                    else {
-                        System.out.println("five");
-                    }
-                    break;
-                case 6:
-                    System.out.println("six");
-                    break;
-                case 7:
-                    System.out.println("seven");
-                    break;
-                case 8:
-                    System.out.println("eight");
-                    break;
-                case 9:
-                    System.out.println("nine");
-                    break;
-            }
+                }
+                else if (b == 1 && g == 0)
+                {
+                    System.out.println("zero");
+                }
+                else
+                {
+                    System.out.printf("and ");
+                }
+                break;
+            case 1:break;
+            case 2:
+                System.out.printf("twenty ");
+                break;
+            case 3:
+                System.out.printf("thirty ");
+                break;
+            case 4:
+                System.out.printf("forty ");
+                break;
+            case 5:
+                System.out.printf("fifty ");
+                break;
+            case 6:
+                System.out.printf("sixty ");
+                break;
+            case 7:
+                System.out.printf("seventy ");
+                break;
+            case 8:
+                System.out.printf("eighty ");
+                break;
+            case 9:
+                System.out.printf("ninety ");
+                break;
+            default:break;
+        }
+        switch (g)
+        {
+            case 0:
+                if (f == 1)
+                {
+                    System.out.printf("and ten");
+                }
+                break;
+            case 1:
+                if (f == 1 && b != 1) {
+                    System.out.println(" and eleven");
+                }
+                else if (f == 1 && b == 1)
+                {
+                    System.out.println("eleven");
+                }
+                else {
+                    System.out.println("one");
+                }
+                break;
+            case 2:
+                if (f == 1 && b != 1) {
+                    System.out.println("and twelve");
+                }
+                else if (f == 1 && b == 1)
+                {
+                    System.out.println("twelve");
+                }
+                else {
+                    System.out.println("two");
+                }
+                break;
+            case 3:
+                System.out.println("three");
+                break;
+            case 4:
+                System.out.println("four");
+                break;
+            case 5:
+                if (f == 1 && b != 1) {
+                    System.out.println("and fifteen");
+                }
+                else if (f == 1 && b == 1)
+                {
+                    System.out.println("fifteen");
+                }
+                else {
+                    System.out.println("five");
+                }
+                break;
+            case 6:
+                System.out.println("six");
+                break;
+            case 7:
+                System.out.println("seven");
+                break;
+            case 8:
+                System.out.println("eight");
+                break;
+            case 9:
+                System.out.println("nine");
+                break;
+        }
 
     }
 }
